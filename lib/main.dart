@@ -11,7 +11,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('ALDO SAUCEDO 22308051281310'),
+          title: Text(
+            'ALDO SAUCEDO 22308051281310',
+            style: TextStyle(
+              fontSize: 16.0, // Ajusta el tamaño del texto aquí
+            ),
+          ),
           backgroundColor: Colors.blue, // Cambia el color del AppBar a azul
         ),
         body: ListView(
