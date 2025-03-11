@@ -1,41 +1,70 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('ALDO SAUCEDO 22308051281310'),
+          backgroundColor: Colors.blue, // Cambia el color del AppBar a azul
+        ),
+        body: ListView(
+          children: [
+            ListTile(
+              leading: Icon(Icons.battery_full, color: Colors.grey),
+              title: Text(
+                'Battery Full',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Text('The battery is full.'),
+              trailing: Icon(Icons.star, color: Colors.grey),
+            ),
+            ListTile(
+              leading: Icon(Icons.anchor, color: Colors.grey),
+              title: Text(
+                'Anchor',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Text('Lower the anchor.'),
+              trailing: Icon(Icons.star, color: Colors.grey),
+            ),
+            ListTile(
+              leading: Icon(Icons.access_alarm, color: Colors.grey),
+              title: Text(
+                'Alarm',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Text('This is the time.'),
+              trailing: Icon(Icons.star, color: Colors.grey),
+            ),
+            ListTile(
+              leading: Icon(Icons.ballot, color: Colors.grey),
+              title: Text(
+                'Ballot',
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              subtitle: Text('Cast your vote.'),
+              trailing: Icon(Icons.star, color: Colors.grey),
+            ),
+          ],
         ),
       ),
     );
